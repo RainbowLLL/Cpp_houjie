@@ -70,3 +70,11 @@ Test1的构造函数带一个int型的参数，代码23行会隐式转换成调�
 
 ![imgae](https://github.com/RainbowLLL/Cpp_houjie/blob/master/slides_imgs/singleton1.PNG)
 更好的写法，上一写法，即使无人使用A,单例也会存在，用下面这种写法，如果没有人使用，A就不存在，区别是把静态变量a放到了getInstance中
+
+## 5.cout的重载 ##
+cout是一种ostream，做了多种类型的重载，因些可以接收多种类型并输出
+
+## 6.类模板和函数模板 ##
+![imgae](https://github.com/RainbowLLL/Cpp_houjie/blob/master/slides_imgs/class_template.PNG)
+![imgae](https://github.com/RainbowLLL/Cpp_houjie/blob/master/slides_imgs/function_template.PNG)
+函数模板这里不用指定T的类型，编译器会对函数模板进行参数推导
