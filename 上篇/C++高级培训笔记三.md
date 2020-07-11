@@ -44,3 +44,29 @@ Test1的构造函数带一个int型的参数，代码23行会隐式转换成调�
 
 ## 3.静态static ##
 ![image](https://github.com/RainbowLLL/Cpp_houjie/blob/master/slides_imgs/static.PNG)
+在类中，数据或者函数前面加了static，它就成为静态成员。
+通过c1的地址来调用成员函数，complex::real(&c1)
+
+成员函数在内存中是只有一份的，为了不同的对象中去调用，会传入this指针。
+
+如果成员加了static关键字，它就脱离了对象。静态函数依然只有一份，静态成员变量也只有一份。例如，银行很多人账户的利率，都是相同的。
+
+静态成员函数和一般成员函数的区别在于，静态函数没有this指针，它只能处理静态数据。
+
+![image](https://github.com/RainbowLLL/Cpp_houjie/blob/master/slides_imgs/static_account.PNG)
+静态成员变量必须在类外进行定义，黄色的行。
+
+通过类名来调用静态函数，或者通过对象调用（此时，不会传入this指针）
+
+## 4.单例 ##
+(单键，单体，单例)
+一种设计模式Singleton，一个类只希望创建一个对象
+
+![imgae](https://github.com/RainbowLLL/Cpp_houjie/blob/master/slides_imgs/singleton2.PNG)
+
+不想让外界创建A，把它的构造函数放在private
+
+外界可能通过静态函数得到唯一的A
+
+![imgae](https://github.com/RainbowLLL/Cpp_houjie/blob/master/slides_imgs/singleton1.PNG)
+更好的写法，上一写法，即使无人使用A,单例也会存在，用下面这种写法，如果没有人使用，A就不存在，区别是把静态变量a放到了getInstance中
