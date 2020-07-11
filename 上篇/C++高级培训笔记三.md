@@ -41,3 +41,6 @@ Test1的构造函数带一个int型的参数，代码23行会隐式转换成调�
 
 ## 2.虚函数 ##
 ![](https://i.imgur.com/rLgBzuh.png)
+
+## 3.静态static ##
+https://github.com/RainbowLLL/Cpp_houjie/blob/master/slides_imgs/static.PNG
