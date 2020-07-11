@@ -78,3 +78,41 @@ cout是一种ostream，做了多种类型的重载，因些可以接收多种类
 ![imgae](https://github.com/RainbowLLL/Cpp_houjie/blob/master/slides_imgs/class_template.PNG)
 ![imgae](https://github.com/RainbowLLL/Cpp_houjie/blob/master/slides_imgs/function_template.PNG)
 函数模板这里不用指定T的类型，编译器会对函数模板进行参数推导
+
+## 7.namespace ##
+名字空间，可以分段写，一个文件里写一部分
+
+using directive
+```
+#include<iostream>
+using namespace std
+int main()
+{
+	cin<<...;
+	cout<<...;
+	return 0;
+}
+```
+
+using declaration
+```
+#include<iostream>
+using std:cout
+int main()
+{
+	std::cin<<...;
+	cout<<...;
+	return 0;
+}
+```
+
+```
+using std:cout
+int main()
+{
+	std::cin<<...;
+	cout<<...;
+	return 0;
+}
+```
+
